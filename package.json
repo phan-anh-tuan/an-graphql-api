@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node --presets=latest",
-    "start": "nodemon --exec npm run babel-node -- ./src/server.js",
+    "start": "MONGO_URL='mongodb://localhost:27017/graphql' nodemon --exec npm run babel-node -- ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,7 +13,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "mongodb": "^3.0.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

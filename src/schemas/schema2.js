@@ -1,4 +1,4 @@
-const { buildSchema } = require('graphql');
+import { buildSchema } from 'graphql';
 
 export default buildSchema(`
   input MessageInput {
@@ -6,6 +6,7 @@ export default buildSchema(`
     author: String
   }
   type Message {
+    "Get a Message"
     id: ID!
     content: String
     author: String
